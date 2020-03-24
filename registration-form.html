@@ -8,121 +8,106 @@
     <title>Registration Form</title>
 </head>
 <body>
-<form>
-    <fieldset>
-        <legend>Personal Info</legend>
-        <div>
-            <label for="first_name">First Name: </label>
-            <input type="text" name="first_name" id="first_name" required>
-        </div>
-        <br>
-        <div>
-            <label for="last_name">Last Name: </label>
-            <input type="text" name="last_name" id="last_name" required>
-        </div>
-        <br>
-        <div>
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <br>
-        <div>
-            <label for="zip_code">Zip Code: </label>
-            <input type="tel" name="zip_code" id="zip_code" placeholder="123456" maxlength="6" pattern="[0-9]{6}"
-                   title="Zip Code must have 6 digits." required>
-        </div>
-        <br>
-        <div>
-            <label for="password">Password: </label>
-            <input type="password" name="password" id="password" required>
-        </div>
-        <br>
-    </fieldset>
-    <fieldset>
-        <legend>Experience Info</legend>
-        <div>
-            <label>Practicing Status</label>
-            <br>
-            <label>
-                <input type="radio" name="practicing_status" value="0" required>
-                Practicing Lawyer
-            </label>
-            <label>
-                <input type="radio" name="practicing_status" value="1" required>
-                Non Practicing Lawyer
-            </label>
-            <label>
-                <input type="radio" name="practicing_status" value="2" required>
-                Retired Lawyer
-            </label>
-        </div>
-        <br>
-        <div>
-            <label for="legal_expertise">Area of legal expertise</label>
-            <br>
-            <select name="legal_expertise" id="legal_expertise">
-                <option value="1">Antitrust</option>
-                <option value="2">Civil Rights</option>
-                <option value="3">Immigration</option>
-                <option value="4">Memes</option>
-                <option value="5">Gaming</option>
-                <option value="6">Pretending to work</option>
-                <option value="7" selected>Other</option>
-            </select>
-        </div>
-        <br>
-        <div>
-            <label for="years_of_experience">Years of experience: </label>
-            <input type="number" name="years_of_experience" id="years_of_experience" min="0" max="60" required>
-        </div>
-        <br>
-        <div>
-            <label for="languages">Languages</label>
-            <br>
-            <select name="languages" id="languages" multiple title="Use CTRL to select many of the options.">
-                <option value="es">Spanish</option>
-                <option value="en">English</option>
-                <option value="do">Dothraki</option>
-                <option value="ky">Kryptonese</option>
-                <option value="kl">Klingon</option>
-                <option value="vu">Vulcan</option>
-                <option value="ali">Alienese</option>
-                <option value="el">Elvish</option>
-            </select>
-        </div>
-        <br>
-        <div>
-            <label for="phone_number">Cell Phone Number: </label>
-            <input type="tel" name="phone_number" id="phone_number" maxlength="9" placeholder="#######">
-        </div>
-        <br>
-        <div>
-            <label>Ethnicity</label>
-            <br>
-            <label>
-                <input type="radio" name="ethnicity" value="0" required>
-                Earthling
-            </label>
-            <label>
-                <input type="radio" name="ethnicity" value="1" required>
-                Martian
-            </label>
-            <label>
-                <input type="radio" name="ethnicity" value="2" required>
-                Asgardian
+<header>
+    <h1>Ready to get started?</h1>
+    <p>Prepare to join one of the top lawyer communities</p>
+</header>
+<main>
+    <form>
+        <fieldset class="personal-info">
+            <legend>Personal Info</legend>
+            <div class="data-item">
+                <label class="data-item-label" for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" required>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="zip_code">Zip Code</label>
+                <input type="tel" name="zip_code" id="zip_code" placeholder="123456" maxlength="6" pattern="[0-9]{6}"
+                       title="Zip Code must have 6 digits." required>
+            </div>
+        </fieldset>
+        <fieldset class="experience-info">
+            <legend>Experience Info</legend>
+            <div class="data-item">
+                <label class="data-item-label" for="practicing_status">Practicing Status</label>
+                <br>
+                <select name="practicing_status" id="practicing_status">
+                    <option value="1">Practicing Lawyer</option>
+                    <option value="2">Non Practicing Lawyer</option>
+                    <option value="3">Retired Lawyer</option>
+                </select>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="years_of_experience">Years of experience</label>
+                <input type="number" name="years_of_experience" id="years_of_experience" min="0" max="60" required>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label">Ethnicity</label>
+                <label>
+                    <input type="radio" name="ethnicity" value="0" required>
+                    Earthling
+                </label>
+                <label>
+                    <input type="radio" name="ethnicity" value="1" required>
+                    Martian
+                </label>
+                <label>
+                    <input type="radio" name="ethnicity" value="2" required>
+                    Asgardian
+                </label>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="legal_expertise">Area of legal expertise
+                    <span>(optional)</span></label>
+                <select name="legal_expertise" id="legal_expertise">
+                    <option value="1">Antitrust</option>
+                    <option value="2">Civil Rights</option>
+                    <option value="3">Immigration</option>
+                    <option value="4">Memes</option>
+                    <option value="5">Gaming</option>
+                    <option value="6">Pretending to work</option>
+                    <option value="7" selected>Other</option>
+                </select>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="languages">Languages <span>(optional)</span></label>
+                <select name="languages" id="languages" multiple title="Use CTRL to select many of the options.">
+                    <option value="es">Spanish</option>
+                    <option value="en">English</option>
+                    <option value="do">Dothraki</option>
+                    <option value="ky">Kryptonese</option>
+                    <option value="kl">Klingon</option>
+                    <option value="vu">Vulcan</option>
+                    <option value="ali">Alienese</option>
+                    <option value="el">Elvish</option>
+                </select>
+            </div>
+            <div class="data-item">
+                <label class="data-item-label" for="phone_number">Cell Phone Number <span>(optional)</span> : </label>
+                <input type="tel" name="phone_number" id="phone_number" maxlength="9" placeholder="#######">
+            </div>
+        </fieldset>
+        <div class="accept-terms">
+            <label class="data-item-label" for="terms_of_use">
+                <input type="checkbox" name="terms_of_use" id="terms_of_use">
+                I swear that I totally read the terms of use
             </label>
         </div>
-    </fieldset>
-    <br>
-    <div>
-        <label for="terms_of_use">
-            <input type="checkbox" name="terms_of_use" id="terms_of_use">
-            I swear that I totally read the terms of use
-        </label>
-    </div>
-    <br>
-    <input type="submit" value="Send Info">
-</form>
+        <input type="submit" value="Send Info">
+    </form>
+</main>
 </body>
 </html>
 

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+body {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    margin-bottom: 50px;
+    background-color: #EDF2F7;
+}
+
+.personal-info {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    margin: auto;
+    width: 550px;
+}
+
+legend {
+    text-align: left;
+    font-size: 25px;
+}
+
+input, select {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 443px;
+    padding-left: 10px;
+    height: 40px;
+}
+
+select[multiple] {
+    height: 100px;
+}
+
+input[type=checkbox], input[type=radio] {
+    width: auto !important;
+    height: auto !important;
+}
+
+input[type=submit] {
+    background: #718096;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.data-item {
+    display: block;
+    margin: 20px 20px;
+}
+
+.data-item-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.data-item-label span {
+    opacity: .5;
+}
+
+.accept-terms {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
